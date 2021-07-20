@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -47,12 +47,13 @@ export function VerifyAccount() {
   } = useForm({resolver : yupResolver(validationSchema)});
   const {id} = useParams();
   const [hospitalData,setHospitalData] = useState({});
-  useEffect(()=>{
+  const getHospitalData=()=>{
     fetch(`https://node-app-back-end-ak.herokuapp.com/hospital/get/${id}`,{method:'GET'})
     .then(res=>res.json())
     .then(res=>setHospitalData(res))
     .catch(res=>console.log(res))
-  },[])
+  }
+  getHospitalData();
    const hospitalEmail = hospitalData.hospitalEmail;
    const [msg,setMsg] = useState("");
   const onSubmit = (data) => {

@@ -9,12 +9,10 @@ import Container from '@material-ui/core/Container';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import {DoctorContext} from './home.js'
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
-import {IdContext} from '../App.js';
-import {GetVisitDataContext} from './home.js';
+import {IdContext,GetVisitDataContext,DoctorContext} from '../App.js';
 
 const useStyles = makeStyles((theme) => ({
   paper: {

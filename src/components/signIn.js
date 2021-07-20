@@ -17,6 +17,7 @@ import * as Yup from "yup";
 import {SetIdContext} from '../App.js';
 import {IdContext} from '../App.js';
 import {Copyright} from './copyright.js';
+import {GetVisitDataContext,GetDoctorDataContext} from '../App.js';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
 export function SignIn() {
   const setId = useContext(SetIdContext);
   const id = useContext(IdContext);
+  const getVisitData = useContext(GetVisitDataContext);
+  const getHospitalData = useContext(GetDoctorDataContext)
   const classes = useStyles();
   const history = useHistory();
   const validationSchema = Yup.object().shape({
@@ -73,6 +76,8 @@ export function SignIn() {
     setId(msg._id);
     if(id){
     localStorage.setItem("t",`${msg.token}`);
+    getVisitData();
+    getHospitalData();
     history.push('/home');
     }
   }

@@ -9,8 +9,7 @@ import Container from '@material-ui/core/Container';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import {IdContext} from '../App.js';
-import {GetDoctorDataContext} from './home.js';
+import {IdContext,GetDoctorDataContext} from '../App.js';
 
 const useStyles = makeStyles((theme) => ({
   paper: {

@@ -1,6 +1,6 @@
 import {CustomizedTables} from './table.js';
 import { useContext, useState } from 'react';
-import {VisitContext} from './home.js';
+import {VisitContext} from '../App.js';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Button from '@material-ui/core/Button';
 import {AddVisit} from './addVisit.js';

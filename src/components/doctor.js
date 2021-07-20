@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import {CustomizedTables} from './table.js';
-import {DoctorContext} from './home.js';
+import {DoctorContext} from '../App.js';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import Button from '@material-ui/core/Button';
 import {Copyright} from './copyright.js';
