@@ -76,8 +76,8 @@ export function SignUp() {
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign up <br/>
-          {msg.message==="green"?<p>A verification link has been sent to your email</p>:<p>{msg.message}</p>}
-          {msg.message==="green"?showMessage():''}
+          {msg==="green"?<p>A verification link has been sent to your email</p>:<p>{msg}</p>}
+          {msg==="green"?showMessage():''}
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)} >
           <Grid container spacing={2}>
