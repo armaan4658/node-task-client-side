@@ -76,7 +76,7 @@ export function SignUp() {
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign up <br/>
-          {msg.message==="green"?<p>A verification email has been sent to your account</p>:<p>{msg.message}</p>}
+          {msg.message==="green"?<p>A verification link has been sent to your email</p>:<p>{msg.message}</p>}
           {msg.message==="green"?showMessage():''}
         </Typography>
         <form onSubmit={handleSubmit(onSubmit)} >

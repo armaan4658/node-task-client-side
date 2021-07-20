@@ -61,7 +61,7 @@ export function ForgotPassword() {
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          <p>{msg.message==="green"?"An password reset email has been sent to your email":""}</p>
+          <p>{msg.message==="green"?"An password reset link has been sent to your email":""}</p>
           {msg.message==="green"?showMessage():''}
         </Typography>
         <Avatar className={classes.avatar}>
